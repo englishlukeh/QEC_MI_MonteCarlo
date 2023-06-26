@@ -5,8 +5,8 @@ from qecsim.models.toric import ToricCode, ToricMWPMDecoder
 import math
 
 # set number of iterations and torus size
-n = 10**6
-L = 2;
+n = 10**4
+L = 5;
 
 # initialise models
 my_code = ToricCode(L,L)
@@ -61,7 +61,7 @@ for i in range(n):
     if syndrome_succ in syndrome_succ_counts:
         syndrome_succ_counts[syndrome_succ] = syndrome_succ_counts[syndrome_succ] + 1
     else:
-        syndrome_succ_counts[syndrome_succ] = 0
+        syndrome_succ_counts[syndrome_succ] = 1
 
 else:
     He = 0
@@ -77,7 +77,8 @@ else:
     Hec = 0
     for succ in succ_counts:
         p = succ_counts[succ]/n
-        Hec = Hec - p*math.log2(p)
+        if p != 0:
+            Hec = Hec - p*math.log2(p)
 
     Hsec = 0
     for syndrome_succ in syndrome_succ_counts:
