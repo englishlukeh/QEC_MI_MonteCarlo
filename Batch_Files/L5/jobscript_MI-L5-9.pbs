@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=80G
+#SBATCH --mem=60G
 #SBATCH --job-name=qecsim
 #SBATCH --time=200:00:00
 #SBATCH --partition=general
@@ -12,4 +12,4 @@
 python3 -m venv venv
 source venv/bin/activate
 pip install qecsim
-python python_MI-L6-9.py
+python python_MI-L5-9.py
