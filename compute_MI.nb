@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3393,        105]
+NotebookOptionsPosition[      2816,         87]
+NotebookOutlinePosition[      3221,        103]
+CellTagsIndexPosition[      3178,        100]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Compute", " ", "probability", " ", "covered"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"p", "=", "0.01"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"L", "=", "15"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"n", "=", 
+     RowBox[{"2", "*", 
+      RowBox[{"L", "^", "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Mu]", "=", 
+     RowBox[{"n", "*", "p"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Sigma]", "=", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"n", "*", "p", "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "p"}], ")"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Floor", "[", 
+    RowBox[{"\[Mu]", "+", 
+     RowBox[{"4", "*", "\[Sigma]"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{"n", ",", "k"}], "]"}], "*", 
+      RowBox[{"p", "^", 
+       RowBox[{"(", "k", ")"}]}], "*", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "p"}], ")"}], "^", 
+       RowBox[{"(", 
+        RowBox[{"n", "-", "k"}], ")"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", "0", ",", 
+       RowBox[{"Floor", "[", 
+        RowBox[{"\[Mu]", "+", 
+         RowBox[{"2", "*", "\[Sigma]"}]}], "]"}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8975856357391624`*^9, 3.8975857559205627`*^9}, {
+  3.897585789231007*^9, 3.897585849523531*^9}, {3.897585910617072*^9, 
+  3.8975859447014065`*^9}, {3.897586023905848*^9, 3.8975860623738174`*^9}},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"a8f3d9ea-ce75-4b42-8ff2-4866e83af193"],
+
+Cell[BoxData["12"], "Output",
+ CellChangeTimes->{{3.897585897804865*^9, 3.8975859452884073`*^9}, {
+  3.8975860251498623`*^9, 3.8975860626379504`*^9}},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"b30e9cbe-c172-414b-b642-23e6ab6aaa32"],
+
+Cell[BoxData["0.9605552045094129`"], "Output",
+ CellChangeTimes->{{3.897585897804865*^9, 3.8975859452884073`*^9}, {
+  3.8975860251498623`*^9, 3.8975860626419044`*^9}},
+ CellLabel->
+  "Out[113]=",ExpressionUUID->"8a5ce4b1-8ea9-4c53-93cd-f8113fdac607"]
+}, Open  ]]
+},
+WindowSize->{1440., 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8cd9ec60-6334-4e75-a2bd-974b3c535773"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1731, 50, 181, "Input",ExpressionUUID->"a8f3d9ea-ce75-4b42-8ff2-4866e83af193"],
+Cell[2314, 74, 233, 4, 32, "Output",ExpressionUUID->"b30e9cbe-c172-414b-b642-23e6ab6aaa32"],
+Cell[2550, 80, 250, 4, 32, "Output",ExpressionUUID->"8a5ce4b1-8ea9-4c53-93cd-f8113fdac607"]
+}, Open  ]]
+}
+]
+*)
+
