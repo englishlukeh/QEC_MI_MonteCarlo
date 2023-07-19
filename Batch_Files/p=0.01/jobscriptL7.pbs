@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#Edit this script to suit your purposes
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=20G
+#SBATCH --job-name=qecsim
+#SBATCH --time=200:00:00
+#SBATCH --partition=general
+#SBATCH --account=a_stace
+
+python3 -m venv venv
+source venv/bin/activate
+pip install more_itertools
+python toric_code-MI-L7.py
