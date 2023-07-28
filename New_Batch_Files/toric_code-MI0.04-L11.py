@@ -8,17 +8,17 @@ import more_itertools as mit
 import csv
 
 # set size of lattice
-L = 5
+L = 11
 num_qubits = 2*(L**2)
-num_iter = 10**7
+num_iter = 10**8
 
 # initialise models
 my_code = ToricCode(L,L)
 my_error_model = BitFlipErrorModel()
 my_decoder = ToricMWPMDecoder()
 
-# set physical error probability to 2%
-error_probability = 0.02
+# set physical error probability to 1%
+error_probability = 0.04
 
 # init variables
 syndrome_count = dict()
@@ -64,7 +64,7 @@ for values in range(num_iter):
 else:
     # now write to csv
     header = ["Syndrome", "S-Count"]
-    with open('MI-L5-S.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-S.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -73,7 +73,7 @@ else:
         writer.writerows(zip(list(syndrome_count.keys()), list(syndrome_count.values())))
     
     header = ["EC", "EC-Count"]
-    with open('MI-L5-EC.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-EC.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -82,7 +82,7 @@ else:
         writer.writerows(zip(list(error_correction_count.keys()), list(error_correction_count.values())))
 
     header = ["S_EC", "S_EC-Count"]
-    with open('MI-L5-S_EC.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-S_EC.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header

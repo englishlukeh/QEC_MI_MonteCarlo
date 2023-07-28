@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=20G
+#SBATCH --mem=40G
 #SBATCH --job-name=qecsim
 #SBATCH --time=200:00:00
 #SBATCH --partition=general
@@ -12,4 +12,4 @@
 python3 -m venv venv
 source venv/bin/activate
 pip install more_itertools
-python toric_code-MI-L13.py
+python toric_code-MI0.01-L11.py

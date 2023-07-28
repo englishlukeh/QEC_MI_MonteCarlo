@@ -8,9 +8,9 @@ import more_itertools as mit
 import csv
 
 # set size of lattice
-L = 13
+L = 11
 num_qubits = 2*(L**2)
-num_iter = 10**7
+num_iter = 10**8
 
 # initialise models
 my_code = ToricCode(L,L)
@@ -64,7 +64,7 @@ for values in range(num_iter):
 else:
     # now write to csv
     header = ["Syndrome", "S-Count"]
-    with open('MI-L13-S.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-S.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -73,7 +73,7 @@ else:
         writer.writerows(zip(list(syndrome_count.keys()), list(syndrome_count.values())))
     
     header = ["EC", "EC-Count"]
-    with open('MI-L13-EC.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-EC.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header
@@ -82,7 +82,7 @@ else:
         writer.writerows(zip(list(error_correction_count.keys()), list(error_correction_count.values())))
 
     header = ["S_EC", "S_EC-Count"]
-    with open('MI-L13-S_EC.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('MI-L11-S_EC.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
 
         # write the header

@@ -8,9 +8,9 @@ import more_itertools as mit
 import csv
 
 # set size of lattice
-L = 11
+L = 9
 num_qubits = 2*(L**2)
-num_iter = 10**7
+num_iter = 10**8
 
 # initialise models
 my_code = ToricCode(L,L)
@@ -18,7 +18,7 @@ my_error_model = BitFlipErrorModel()
 my_decoder = ToricMWPMDecoder()
 
 # set physical error probability to 1%
-error_probability = 0.01
+error_probability = 0.06
 
 # init variables
 syndrome_count = dict()
